@@ -1,2 +1,2 @@
 # Machine-Learning
-Contains Machine Learning algorithms based projects
+Contains Machine Learning based projects
