@@ -63,7 +63,7 @@ classifier.fit_generator(
 # Making new single predictions
 import numpy as np
 from keras.preprocessing import image
-test_img = image.load_img('single_prediction/archie.jpg', target_size = (64, 64))
+test_img = image.load_img('single_prediction/image.jpg', target_size = (64, 64))
 test_img = image.img_to_array(test_img)
 test_img = np.expand_dims(test_img, axis=0)
 result = classifier.predict(test_img)
