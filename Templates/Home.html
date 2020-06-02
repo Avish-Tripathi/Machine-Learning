@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>JEE Percentile</title>
+{% endblock %}
+
+{% block style %}
+body{
+<!--        background-image: url('jee.jpg');-->
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 150% 100%;
+}
+input{
+        width: 30%;
+        padding: 8px 20px;
+        margin: 4px 0;
+        box-sizing: border-box;
+        background-color: lightyellow;
+    }
+input[type = submit]{
+        font-size: 24px;
+        font-family: cursive;
+        width: 20%;
+        color: indigo;
+        padding: 14px 10px;
+        margin: 8px 0;
+        background-color: indianred;
+    }
+p{
+    font-family: monospace;
+}
+{% endblock %}
+
+{% block body %}
+ <div>
+    <center>
+        <br><h1><u><p>
+        <font color="crimson" size="+4">JEE Mains 2020</font><br></u></h1>
+        <h2><font color="firebrick" size="+3">Percentile Predictor</font><br></h2></p>
+        <form action="{{ url_for('predict') }}" method="post">
+            <font size="+2"><p>
+            <label for="Physics"><b>Enter percentile of Physics: </b></label><br>
+            <input type="text" name="physics" required><br>
+                <label for="Chemistry"><b>Enter percentile of Chemistry: </b></label><br>
+            <input type="text" name="chemistry" required><br>
+                <label for="Maths"><b>Enter percentile of Mathematics: </b></label><br>
+            <input type="text" name="maths" required><br><br>
+                <input type="submit" value="Predict"><br><br>
+            </p></font>
+        </form>
+        <h2><font color="red">{{ prediction_text }}</font></h2>
+    </center>
+</div>
+
+{% endblock %}
