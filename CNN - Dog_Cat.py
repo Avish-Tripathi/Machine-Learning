@@ -69,6 +69,6 @@ test_img = np.expand_dims(test_img, axis=0)
 result = classifier.predict(test_img)
 training_set.class_indices
 if result[0][0]==1:
-    prediction = 'Dog'
+    prediction = 'This is a Dog'
 else:
-    prediction = 'Cat'
+    prediction = 'This is a Cat'
